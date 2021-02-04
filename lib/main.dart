@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_tech_research/animation_test.dart';
 
 void main() => runApp(MaterialApp(home: FlutterTechResearchApp()));
 
@@ -15,10 +16,19 @@ class FlutterTechResearchApp extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             RaisedButton(
-              child: const Text('TEST'),
-              color: Colors.blue[200],
+              child: const Text('Animation Test'),
+              color: Colors.orange,
               textColor: Colors.white,
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return AnimationTest();
+                    },
+                  ),
+                );
+              },
             ),
           ],
         ),
